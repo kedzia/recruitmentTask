@@ -8,7 +8,12 @@
 
 import Foundation
 
-struct DailyMotionUser: User {
+struct DailyMotionUser: User, Codable {
     let username: String
-    let avatarUrl: URL
+    let avatarUrl: URL?
+    
+    enum CodingKeys: String, CodingKey {
+        case username = "username"
+        case avatarUrl = "avatar_360_url"
+    }
 }

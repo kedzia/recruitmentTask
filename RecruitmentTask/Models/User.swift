@@ -10,5 +10,5 @@ import Foundation
 
 protocol User {
     var username: String { get }
-    var avatarUrl: URL { get }
+    var avatarUrl: URL? { get }
 }
