@@ -12,18 +12,7 @@ import RecruitmentTask
 class GithubUserTest: XCTestCase {
 
     func testCodable() {
-        guard let pathString = Bundle(for: type(of: self)).path(forResource: "github_users", ofType: "json") else {
-            fatalError("github_users.json not found")
-        }
-        
-        guard let jsonString = try? NSString(contentsOfFile: pathString, encoding: String.Encoding.utf8.rawValue) else {
-            fatalError("Unable to convert github_users.json to String")
-        }
-        
-        guard let jsonData = jsonString.data(using: String.Encoding.utf8.rawValue) else {
-            fatalError("Unable to convert github_users.json to NSData")
-        }
-        
+        let jsonData = TestHelper.getDataWithGithubUsers()
         let githubUsers = try! JSONDecoder().decode([GithubUser].self, from: jsonData)
         
         XCTAssertEqual(githubUsers.count, 3)

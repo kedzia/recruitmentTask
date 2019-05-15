@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6608442B228C85080033EDD7 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6608442A228C85080033EDD7 /* ApiClient.swift */; };
+		6608442D228C86EA0033EDD7 /* GithubUsersApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6608442C228C86EA0033EDD7 /* GithubUsersApiHandler.swift */; };
+		6608442F228C88930033EDD7 /* ApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6608442E228C88930033EDD7 /* ApiHandler.swift */; };
+		66084431228C91610033EDD7 /* GithubUsersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66084430228C91610033EDD7 /* GithubUsersService.swift */; };
+		66084436228C97D30033EDD7 /* GithubUsersApiHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66084435228C97D30033EDD7 /* GithubUsersApiHandlerTests.swift */; };
+		66084437228C97D90033EDD7 /* GithubUsersApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6608442C228C86EA0033EDD7 /* GithubUsersApiHandler.swift */; };
+		66084438228C97DD0033EDD7 /* GithubUsersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66084430228C91610033EDD7 /* GithubUsersService.swift */; };
+		66084439228C97E20033EDD7 /* ApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6608442E228C88930033EDD7 /* ApiHandler.swift */; };
+		6608443A228C97E50033EDD7 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6608442A228C85080033EDD7 /* ApiClient.swift */; };
+		6608443C228C9A090033EDD7 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6608443B228C9A090033EDD7 /* TestHelper.swift */; };
+		6608443E228C9BDE0033EDD7 /* github_users_malformed.json in Resources */ = {isa = PBXBuildFile; fileRef = 6608443D228C9BDE0033EDD7 /* github_users_malformed.json */; };
 		661A02D2228B517F00DE9273 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661A02D1228B517F00DE9273 /* AppDelegate.swift */; };
 		661A02D4228B517F00DE9273 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661A02D3228B517F00DE9273 /* ViewController.swift */; };
 		661A02D7228B517F00DE9273 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 661A02D5228B517F00DE9273 /* Main.storyboard */; };
@@ -43,6 +54,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6608442A228C85080033EDD7 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		6608442C228C86EA0033EDD7 /* GithubUsersApiHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUsersApiHandler.swift; sourceTree = "<group>"; };
+		6608442E228C88930033EDD7 /* ApiHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApiHandler.swift; path = GithubUsersService/ApiHandler.swift; sourceTree = "<group>"; };
+		66084430228C91610033EDD7 /* GithubUsersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUsersService.swift; sourceTree = "<group>"; };
+		66084435228C97D30033EDD7 /* GithubUsersApiHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUsersApiHandlerTests.swift; sourceTree = "<group>"; };
+		6608443B228C9A090033EDD7 /* TestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
+		6608443D228C9BDE0033EDD7 /* github_users_malformed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = github_users_malformed.json; sourceTree = "<group>"; };
 		661A02CE228B517F00DE9273 /* RecruitmentTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecruitmentTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		661A02D1228B517F00DE9273 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		661A02D3228B517F00DE9273 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +107,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		66084428228C84120033EDD7 /* GithubUsersService */ = {
+			isa = PBXGroup;
+			children = (
+				6608442C228C86EA0033EDD7 /* GithubUsersApiHandler.swift */,
+				66084430228C91610033EDD7 /* GithubUsersService.swift */,
+			);
+			path = GithubUsersService;
+			sourceTree = "<group>";
+		};
+		66084429228C84420033EDD7 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				661A0314228C83CE00DE9273 /* Services */,
+				6608442A228C85080033EDD7 /* ApiClient.swift */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		66084432228C978C0033EDD7 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				66084433228C979C0033EDD7 /* Services */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		66084433228C979C0033EDD7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				66084434228C97A50033EDD7 /* GithubUsersService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		66084434228C97A50033EDD7 /* GithubUsersService */ = {
+			isa = PBXGroup;
+			children = (
+				66084435228C97D30033EDD7 /* GithubUsersApiHandlerTests.swift */,
+			);
+			path = GithubUsersService;
+			sourceTree = "<group>";
+		};
 		661A02C5228B517F00DE9273 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +172,7 @@
 		661A02D0228B517F00DE9273 /* RecruitmentTask */ = {
 			isa = PBXGroup;
 			children = (
+				66084429228C84420033EDD7 /* NetworkLayer */,
 				661A02FF228B525900DE9273 /* Models */,
 				661A02D1228B517F00DE9273 /* AppDelegate.swift */,
 				661A02D3228B517F00DE9273 /* ViewController.swift */,
@@ -126,8 +187,10 @@
 		661A02E5228B518300DE9273 /* RecruitmentTaskTests */ = {
 			isa = PBXGroup;
 			children = (
+				66084432228C978C0033EDD7 /* NetworkLayer */,
 				661A0308228B566400DE9273 /* Models */,
 				661A02E8228B518300DE9273 /* Info.plist */,
+				6608443B228C9A090033EDD7 /* TestHelper.swift */,
 			);
 			path = RecruitmentTaskTests;
 			sourceTree = "<group>";
@@ -154,12 +217,22 @@
 		661A0308228B566400DE9273 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				6608443D228C9BDE0033EDD7 /* github_users_malformed.json */,
 				661A0309228B568400DE9273 /* github_users.json */,
 				661A0306228B562300DE9273 /* GithubUserTest.swift */,
 				661A0311228B624D00DE9273 /* dailymotion_users.json */,
 				661A030F228B620C00DE9273 /* DailyMotionUserTest.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		661A0314228C83CE00DE9273 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				66084428228C84120033EDD7 /* GithubUsersService */,
+				6608442E228C88930033EDD7 /* ApiHandler.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +350,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6608443E228C9BDE0033EDD7 /* github_users_malformed.json in Resources */,
 				661A0312228B624D00DE9273 /* dailymotion_users.json in Resources */,
 				661A030A228B568400DE9273 /* github_users.json in Resources */,
 			);
@@ -301,6 +375,10 @@
 				661A02D4228B517F00DE9273 /* ViewController.swift in Sources */,
 				661A02D2228B517F00DE9273 /* AppDelegate.swift in Sources */,
 				661A0303228B539400DE9273 /* GithubUser.swift in Sources */,
+				6608442F228C88930033EDD7 /* ApiHandler.swift in Sources */,
+				6608442D228C86EA0033EDD7 /* GithubUsersApiHandler.swift in Sources */,
+				66084431228C91610033EDD7 /* GithubUsersService.swift in Sources */,
+				6608442B228C85080033EDD7 /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,11 +386,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66084437228C97D90033EDD7 /* GithubUsersApiHandler.swift in Sources */,
+				66084438228C97DD0033EDD7 /* GithubUsersService.swift in Sources */,
 				661A0310228B620C00DE9273 /* DailyMotionUserTest.swift in Sources */,
 				661A0307228B562300DE9273 /* GithubUserTest.swift in Sources */,
+				6608443C228C9A090033EDD7 /* TestHelper.swift in Sources */,
+				66084439228C97E20033EDD7 /* ApiHandler.swift in Sources */,
+				66084436228C97D30033EDD7 /* GithubUsersApiHandlerTests.swift in Sources */,
 				661A030D228B58E700DE9273 /* GithubUser.swift in Sources */,
 				661A0313228B642D00DE9273 /* DailyMotionUser.swift in Sources */,
 				661A030E228B58F900DE9273 /* User.swift in Sources */,
+				6608443A228C97E50033EDD7 /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
