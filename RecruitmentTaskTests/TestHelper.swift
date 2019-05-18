@@ -18,6 +18,10 @@ class TestHelper {
         return TestHelper.getDataFromPath("github_users_malformed", type: "json")
     }
     
+    static func getDailyMotionUsersResponse() -> Data {
+        return TestHelper.getDataFromPath("dailymotion_response", type: "json")
+    }
+    
     static func getDataFromPath(_ path: String, type: String) -> Data {
         guard let pathString = Bundle(for: TestHelper.self).path(forResource: path, ofType: type) else {
             fatalError("\(path + type) not found")

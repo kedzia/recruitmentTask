@@ -16,7 +16,12 @@ class ApiClient {
     }
     
     func performRequest(_ request: URLRequest,
-                        completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) {
-        urlSession.dataTask(with: request, completionHandler: completionHandler).resume()
+                        completionHandler: @escaping (Data?, Error?) -> Void) {
+        urlSession.dataTask(with: request) { data, response, error in
+            
+            //check reponse codes
+            
+            completionHandler(data, error)
+            }.resume()
     }
 }

@@ -18,6 +18,29 @@
 		6608443A228C97E50033EDD7 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6608442A228C85080033EDD7 /* ApiClient.swift */; };
 		6608443C228C9A090033EDD7 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6608443B228C9A090033EDD7 /* TestHelper.swift */; };
 		6608443E228C9BDE0033EDD7 /* github_users_malformed.json in Resources */ = {isa = PBXBuildFile; fileRef = 6608443D228C9BDE0033EDD7 /* github_users_malformed.json */; };
+		66084446228E017B0033EDD7 /* GithubUsersServiceIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66084445228E017B0033EDD7 /* GithubUsersServiceIntegrationTests.swift */; };
+		6608444D228E01870033EDD7 /* GithubUsersApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6608442C228C86EA0033EDD7 /* GithubUsersApiHandler.swift */; };
+		6608444E228E018B0033EDD7 /* GithubUsersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66084430228C91610033EDD7 /* GithubUsersService.swift */; };
+		6608444F228E018E0033EDD7 /* ApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6608442E228C88930033EDD7 /* ApiHandler.swift */; };
+		66084450228E01910033EDD7 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6608442A228C85080033EDD7 /* ApiClient.swift */; };
+		66084451228E01990033EDD7 /* GithubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661A0302228B539400DE9273 /* GithubUser.swift */; };
+		66084452228E019B0033EDD7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661A0300228B52E100DE9273 /* User.swift */; };
+		66084453228E01A00033EDD7 /* DailyMotionUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661A0304228B53E300DE9273 /* DailyMotionUser.swift */; };
+		66084456228E045F0033EDD7 /* DailyMotionUsersApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66084455228E045F0033EDD7 /* DailyMotionUsersApiHandler.swift */; };
+		66084457228E045F0033EDD7 /* DailyMotionUsersApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66084455228E045F0033EDD7 /* DailyMotionUsersApiHandler.swift */; };
+		66084458228E045F0033EDD7 /* DailyMotionUsersApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66084455228E045F0033EDD7 /* DailyMotionUsersApiHandler.swift */; };
+		6608445A228E04950033EDD7 /* DailyMotionUsersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66084459228E04950033EDD7 /* DailyMotionUsersResponse.swift */; };
+		6608445B228E04950033EDD7 /* DailyMotionUsersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66084459228E04950033EDD7 /* DailyMotionUsersResponse.swift */; };
+		6608445C228E04950033EDD7 /* DailyMotionUsersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66084459228E04950033EDD7 /* DailyMotionUsersResponse.swift */; };
+		6608445E228E09ED0033EDD7 /* DailyMotionUsersIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6608445D228E09ED0033EDD7 /* DailyMotionUsersIntegrationTests.swift */; };
+		66084460228E0A1A0033EDD7 /* DailyMotionUsersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6608445F228E0A1A0033EDD7 /* DailyMotionUsersService.swift */; };
+		66084461228E0A1A0033EDD7 /* DailyMotionUsersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6608445F228E0A1A0033EDD7 /* DailyMotionUsersService.swift */; };
+		66084462228E0A1A0033EDD7 /* DailyMotionUsersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6608445F228E0A1A0033EDD7 /* DailyMotionUsersService.swift */; };
+		66084465228E0F8B0033EDD7 /* DailyMotionUsersApiHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66084464228E0F8B0033EDD7 /* DailyMotionUsersApiHandlerTests.swift */; };
+		66084467228FF1EA0033EDD7 /* DailyMotionResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66084466228FF1EA0033EDD7 /* DailyMotionResponseTests.swift */; };
+		66084469228FF1FF0033EDD7 /* dailymotion_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 66084468228FF1FF0033EDD7 /* dailymotion_response.json */; };
+		6608446A228FF1FF0033EDD7 /* dailymotion_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 66084468228FF1FF0033EDD7 /* dailymotion_response.json */; };
+		6608446B228FF1FF0033EDD7 /* dailymotion_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 66084468228FF1FF0033EDD7 /* dailymotion_response.json */; };
 		661A02D2228B517F00DE9273 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661A02D1228B517F00DE9273 /* AppDelegate.swift */; };
 		661A02D4228B517F00DE9273 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661A02D3228B517F00DE9273 /* ViewController.swift */; };
 		661A02D7228B517F00DE9273 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 661A02D5228B517F00DE9273 /* Main.storyboard */; };
@@ -37,6 +60,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		66084448228E017B0033EDD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 661A02C6228B517F00DE9273 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 661A02CD228B517F00DE9273;
+			remoteInfo = RecruitmentTask;
+		};
 		661A02E3228B518300DE9273 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 661A02C6228B517F00DE9273 /* Project object */;
@@ -61,6 +91,16 @@
 		66084435228C97D30033EDD7 /* GithubUsersApiHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUsersApiHandlerTests.swift; sourceTree = "<group>"; };
 		6608443B228C9A090033EDD7 /* TestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
 		6608443D228C9BDE0033EDD7 /* github_users_malformed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = github_users_malformed.json; sourceTree = "<group>"; };
+		66084443228E017B0033EDD7 /* RecruitmentTaskIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecruitmentTaskIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		66084445228E017B0033EDD7 /* GithubUsersServiceIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUsersServiceIntegrationTests.swift; sourceTree = "<group>"; };
+		66084447228E017B0033EDD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66084455228E045F0033EDD7 /* DailyMotionUsersApiHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMotionUsersApiHandler.swift; sourceTree = "<group>"; };
+		66084459228E04950033EDD7 /* DailyMotionUsersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMotionUsersResponse.swift; sourceTree = "<group>"; };
+		6608445D228E09ED0033EDD7 /* DailyMotionUsersIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMotionUsersIntegrationTests.swift; sourceTree = "<group>"; };
+		6608445F228E0A1A0033EDD7 /* DailyMotionUsersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMotionUsersService.swift; sourceTree = "<group>"; };
+		66084464228E0F8B0033EDD7 /* DailyMotionUsersApiHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMotionUsersApiHandlerTests.swift; sourceTree = "<group>"; };
+		66084466228FF1EA0033EDD7 /* DailyMotionResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMotionResponseTests.swift; sourceTree = "<group>"; };
+		66084468228FF1FF0033EDD7 /* dailymotion_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dailymotion_response.json; sourceTree = "<group>"; };
 		661A02CE228B517F00DE9273 /* RecruitmentTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecruitmentTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		661A02D1228B517F00DE9273 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		661A02D3228B517F00DE9273 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +123,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		66084440228E017B0033EDD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		661A02CB228B517F00DE9273 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -136,6 +183,7 @@
 		66084433228C979C0033EDD7 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				66084463228E0F4F0033EDD7 /* DailyMotionUsersService */,
 				66084434228C97A50033EDD7 /* GithubUsersService */,
 			);
 			path = Services;
@@ -149,12 +197,43 @@
 			path = GithubUsersService;
 			sourceTree = "<group>";
 		};
+		66084444228E017B0033EDD7 /* RecruitmentTaskIntegrationTests */ = {
+			isa = PBXGroup;
+			children = (
+				66084445228E017B0033EDD7 /* GithubUsersServiceIntegrationTests.swift */,
+				66084447228E017B0033EDD7 /* Info.plist */,
+				6608445D228E09ED0033EDD7 /* DailyMotionUsersIntegrationTests.swift */,
+			);
+			path = RecruitmentTaskIntegrationTests;
+			sourceTree = "<group>";
+		};
+		66084454228E04380033EDD7 /* DailyMotionUsersService */ = {
+			isa = PBXGroup;
+			children = (
+				66084455228E045F0033EDD7 /* DailyMotionUsersApiHandler.swift */,
+				66084459228E04950033EDD7 /* DailyMotionUsersResponse.swift */,
+				6608445F228E0A1A0033EDD7 /* DailyMotionUsersService.swift */,
+			);
+			path = DailyMotionUsersService;
+			sourceTree = "<group>";
+		};
+		66084463228E0F4F0033EDD7 /* DailyMotionUsersService */ = {
+			isa = PBXGroup;
+			children = (
+				66084464228E0F8B0033EDD7 /* DailyMotionUsersApiHandlerTests.swift */,
+				66084466228FF1EA0033EDD7 /* DailyMotionResponseTests.swift */,
+				66084468228FF1FF0033EDD7 /* dailymotion_response.json */,
+			);
+			path = DailyMotionUsersService;
+			sourceTree = "<group>";
+		};
 		661A02C5228B517F00DE9273 = {
 			isa = PBXGroup;
 			children = (
 				661A02D0228B517F00DE9273 /* RecruitmentTask */,
 				661A02E5228B518300DE9273 /* RecruitmentTaskTests */,
 				661A02F0228B518300DE9273 /* RecruitmentTaskUITests */,
+				66084444228E017B0033EDD7 /* RecruitmentTaskIntegrationTests */,
 				661A02CF228B517F00DE9273 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -165,6 +244,7 @@
 				661A02CE228B517F00DE9273 /* RecruitmentTask.app */,
 				661A02E2228B518300DE9273 /* RecruitmentTaskTests.xctest */,
 				661A02ED228B518300DE9273 /* RecruitmentTaskUITests.xctest */,
+				66084443228E017B0033EDD7 /* RecruitmentTaskIntegrationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -229,6 +309,7 @@
 		661A0314228C83CE00DE9273 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				66084454228E04380033EDD7 /* DailyMotionUsersService */,
 				66084428228C84120033EDD7 /* GithubUsersService */,
 				6608442E228C88930033EDD7 /* ApiHandler.swift */,
 			);
@@ -238,6 +319,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		66084442228E017B0033EDD7 /* RecruitmentTaskIntegrationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6608444A228E017B0033EDD7 /* Build configuration list for PBXNativeTarget "RecruitmentTaskIntegrationTests" */;
+			buildPhases = (
+				6608443F228E017B0033EDD7 /* Sources */,
+				66084440228E017B0033EDD7 /* Frameworks */,
+				66084441228E017B0033EDD7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				66084449228E017B0033EDD7 /* PBXTargetDependency */,
+			);
+			name = RecruitmentTaskIntegrationTests;
+			productName = RecruitmentTaskIntegrationTests;
+			productReference = 66084443228E017B0033EDD7 /* RecruitmentTaskIntegrationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		661A02CD228B517F00DE9273 /* RecruitmentTask */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 661A02F6228B518300DE9273 /* Build configuration list for PBXNativeTarget "RecruitmentTask" */;
@@ -301,6 +400,10 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Adam Kędzia";
 				TargetAttributes = {
+					66084442228E017B0033EDD7 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 661A02CD228B517F00DE9273;
+					};
 					661A02CD228B517F00DE9273 = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
@@ -331,15 +434,25 @@
 				661A02CD228B517F00DE9273 /* RecruitmentTask */,
 				661A02E1228B518300DE9273 /* RecruitmentTaskTests */,
 				661A02EC228B518300DE9273 /* RecruitmentTaskUITests */,
+				66084442228E017B0033EDD7 /* RecruitmentTaskIntegrationTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		66084441228E017B0033EDD7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6608446B228FF1FF0033EDD7 /* dailymotion_response.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		661A02CC228B517F00DE9273 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66084469228FF1FF0033EDD7 /* dailymotion_response.json in Resources */,
 				661A02DC228B518300DE9273 /* LaunchScreen.storyboard in Resources */,
 				661A02D9228B518200DE9273 /* Assets.xcassets in Resources */,
 				661A02D7228B517F00DE9273 /* Main.storyboard in Resources */,
@@ -350,6 +463,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6608446A228FF1FF0033EDD7 /* dailymotion_response.json in Resources */,
 				6608443E228C9BDE0033EDD7 /* github_users_malformed.json in Resources */,
 				661A0312228B624D00DE9273 /* dailymotion_users.json in Resources */,
 				661A030A228B568400DE9273 /* github_users.json in Resources */,
@@ -366,15 +480,37 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6608443F228E017B0033EDD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66084453228E01A00033EDD7 /* DailyMotionUser.swift in Sources */,
+				6608445C228E04950033EDD7 /* DailyMotionUsersResponse.swift in Sources */,
+				6608445E228E09ED0033EDD7 /* DailyMotionUsersIntegrationTests.swift in Sources */,
+				66084446228E017B0033EDD7 /* GithubUsersServiceIntegrationTests.swift in Sources */,
+				66084462228E0A1A0033EDD7 /* DailyMotionUsersService.swift in Sources */,
+				66084451228E01990033EDD7 /* GithubUser.swift in Sources */,
+				6608444E228E018B0033EDD7 /* GithubUsersService.swift in Sources */,
+				6608444D228E01870033EDD7 /* GithubUsersApiHandler.swift in Sources */,
+				6608444F228E018E0033EDD7 /* ApiHandler.swift in Sources */,
+				66084458228E045F0033EDD7 /* DailyMotionUsersApiHandler.swift in Sources */,
+				66084450228E01910033EDD7 /* ApiClient.swift in Sources */,
+				66084452228E019B0033EDD7 /* User.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		661A02CA228B517F00DE9273 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				661A0305228B53E300DE9273 /* DailyMotionUser.swift in Sources */,
+				66084456228E045F0033EDD7 /* DailyMotionUsersApiHandler.swift in Sources */,
 				661A0301228B52E100DE9273 /* User.swift in Sources */,
 				661A02D4228B517F00DE9273 /* ViewController.swift in Sources */,
+				66084460228E0A1A0033EDD7 /* DailyMotionUsersService.swift in Sources */,
 				661A02D2228B517F00DE9273 /* AppDelegate.swift in Sources */,
 				661A0303228B539400DE9273 /* GithubUser.swift in Sources */,
+				6608445A228E04950033EDD7 /* DailyMotionUsersResponse.swift in Sources */,
 				6608442F228C88930033EDD7 /* ApiHandler.swift in Sources */,
 				6608442D228C86EA0033EDD7 /* GithubUsersApiHandler.swift in Sources */,
 				66084431228C91610033EDD7 /* GithubUsersService.swift in Sources */,
@@ -387,8 +523,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				66084437228C97D90033EDD7 /* GithubUsersApiHandler.swift in Sources */,
+				66084465228E0F8B0033EDD7 /* DailyMotionUsersApiHandlerTests.swift in Sources */,
 				66084438228C97DD0033EDD7 /* GithubUsersService.swift in Sources */,
 				661A0310228B620C00DE9273 /* DailyMotionUserTest.swift in Sources */,
+				66084467228FF1EA0033EDD7 /* DailyMotionResponseTests.swift in Sources */,
+				66084457228E045F0033EDD7 /* DailyMotionUsersApiHandler.swift in Sources */,
 				661A0307228B562300DE9273 /* GithubUserTest.swift in Sources */,
 				6608443C228C9A090033EDD7 /* TestHelper.swift in Sources */,
 				66084439228C97E20033EDD7 /* ApiHandler.swift in Sources */,
@@ -396,6 +535,8 @@
 				661A030D228B58E700DE9273 /* GithubUser.swift in Sources */,
 				661A0313228B642D00DE9273 /* DailyMotionUser.swift in Sources */,
 				661A030E228B58F900DE9273 /* User.swift in Sources */,
+				6608445B228E04950033EDD7 /* DailyMotionUsersResponse.swift in Sources */,
+				66084461228E0A1A0033EDD7 /* DailyMotionUsersService.swift in Sources */,
 				6608443A228C97E50033EDD7 /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +552,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		66084449228E017B0033EDD7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 661A02CD228B517F00DE9273 /* RecruitmentTask */;
+			targetProxy = 66084448228E017B0033EDD7 /* PBXContainerItemProxy */;
+		};
 		661A02E4228B518300DE9273 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 661A02CD228B517F00DE9273 /* RecruitmentTask */;
@@ -443,6 +589,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		6608444B228E017B0033EDD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X73ZFY2V4U;
+				INFOPLIST_FILE = RecruitmentTaskIntegrationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kedzia.adam.RecruitmentTaskIntegrationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RecruitmentTask.app/RecruitmentTask";
+			};
+			name = Debug;
+		};
+		6608444C228E017B0033EDD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X73ZFY2V4U;
+				INFOPLIST_FILE = RecruitmentTaskIntegrationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kedzia.adam.RecruitmentTaskIntegrationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RecruitmentTask.app/RecruitmentTask";
+			};
+			name = Release;
+		};
 		661A02F4228B518300DE9273 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -683,6 +869,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6608444A228E017B0033EDD7 /* Build configuration list for PBXNativeTarget "RecruitmentTaskIntegrationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6608444B228E017B0033EDD7 /* Debug */,
+				6608444C228E017B0033EDD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		661A02C9228B517F00DE9273 /* Build configuration list for PBXProject "RecruitmentTask" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

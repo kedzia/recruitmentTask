@@ -1,31 +1,30 @@
 //
-//  GithubUsersService.swift
+//  DailyMotionUsersService.swift
 //  RecruitmentTask
 //
-//  Created by Adam Kędzia on 15/05/2019.
+//  Created by Adam Kędzia on 16/05/2019.
 //  Copyright © 2019 Adam Kędzia. All rights reserved.
 //
 
 import Foundation
 
-class GithubUsersService {
-    let apiHandler: GithubUsersApiHandler
+class DailyMotionUsersService {
+    let apiHandler: DailyMotionUsersApiHandler
     let apiClient: ApiClient
     
-    init(apiHandler: GithubUsersApiHandler, apiClient: ApiClient) {
+    init(apiHandler: DailyMotionUsersApiHandler, apiClient: ApiClient) {
         self.apiHandler = apiHandler
         self.apiClient = apiClient
     }
     
-    func getGithubUsers(completion:@escaping (Result<[GithubUser], Error>) -> Void) {
+    func getDailyMotionUsers(completion: @escaping((Result<[DailyMotionUser], Error>) -> Void)) {
         let request = apiHandler.createRequest()
         apiClient.performRequest(request) { [weak self] data, error in
-            
             guard let strongSelf = self else {
                 completion(.success([]))
                 return
             }
-    
+            
             if let error = error {
                 completion(.failure(error))
                 return
