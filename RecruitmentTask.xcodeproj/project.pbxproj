@@ -54,6 +54,12 @@
 		66084483229015F90033EDD7 /* UsersListCollectionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66084482229015F90033EDD7 /* UsersListCollectionViewController.storyboard */; };
 		66084484229015F90033EDD7 /* UsersListCollectionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66084482229015F90033EDD7 /* UsersListCollectionViewController.storyboard */; };
 		6608448522901D910033EDD7 /* UsersListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66084474228FF8ED0033EDD7 /* UsersListCollectionViewController.swift */; };
+		66084488229023A50033EDD7 /* UserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66084486229023A50033EDD7 /* UserCollectionViewCell.swift */; };
+		66084489229023A50033EDD7 /* UserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66084486229023A50033EDD7 /* UserCollectionViewCell.swift */; };
+		6608448A229023A50033EDD7 /* UserCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66084487229023A50033EDD7 /* UserCollectionViewCell.xib */; };
+		6608448B229023A50033EDD7 /* UserCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66084487229023A50033EDD7 /* UserCollectionViewCell.xib */; };
+		6608448D22903E0D0033EDD7 /* ListFlowLayoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6608448C22903E0D0033EDD7 /* ListFlowLayoutDelegate.swift */; };
+		6608448E22903E0D0033EDD7 /* ListFlowLayoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6608448C22903E0D0033EDD7 /* ListFlowLayoutDelegate.swift */; };
 		661A02D2228B517F00DE9273 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661A02D1228B517F00DE9273 /* AppDelegate.swift */; };
 		661A02D9228B518200DE9273 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 661A02D8228B518200DE9273 /* Assets.xcassets */; };
 		661A02DC228B518300DE9273 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 661A02DA228B518300DE9273 /* LaunchScreen.storyboard */; };
@@ -119,6 +125,9 @@
 		6608447A229008E50033EDD7 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		6608447D229013290033EDD7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		66084482229015F90033EDD7 /* UsersListCollectionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UsersListCollectionViewController.storyboard; sourceTree = "<group>"; };
+		66084486229023A50033EDD7 /* UserCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionViewCell.swift; sourceTree = "<group>"; };
+		66084487229023A50033EDD7 /* UserCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCollectionViewCell.xib; sourceTree = "<group>"; };
+		6608448C22903E0D0033EDD7 /* ListFlowLayoutDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFlowLayoutDelegate.swift; sourceTree = "<group>"; };
 		661A02CE228B517F00DE9273 /* RecruitmentTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecruitmentTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		661A02D1228B517F00DE9273 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		661A02D8228B518200DE9273 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -257,7 +266,10 @@
 				6608446E228FF89D0033EDD7 /* UsersListPresenter.swift */,
 				66084471228FF8AD0033EDD7 /* UsersListView.swift */,
 				66084474228FF8ED0033EDD7 /* UsersListCollectionViewController.swift */,
+				6608448C22903E0D0033EDD7 /* ListFlowLayoutDelegate.swift */,
 				66084482229015F90033EDD7 /* UsersListCollectionViewController.storyboard */,
+				66084486229023A50033EDD7 /* UserCollectionViewCell.swift */,
+				66084487229023A50033EDD7 /* UserCollectionViewCell.xib */,
 			);
 			path = UsersList;
 			sourceTree = "<group>";
@@ -500,6 +512,7 @@
 				66084469228FF1FF0033EDD7 /* dailymotion_response.json in Resources */,
 				6608447E229013290033EDD7 /* Default-568h@2x.png in Resources */,
 				66084483229015F90033EDD7 /* UsersListCollectionViewController.storyboard in Resources */,
+				6608448A229023A50033EDD7 /* UserCollectionViewCell.xib in Resources */,
 				661A02DC228B518300DE9273 /* LaunchScreen.storyboard in Resources */,
 				661A02D9228B518200DE9273 /* Assets.xcassets in Resources */,
 			);
@@ -512,6 +525,7 @@
 				6608446A228FF1FF0033EDD7 /* dailymotion_response.json in Resources */,
 				6608443E228C9BDE0033EDD7 /* github_users_malformed.json in Resources */,
 				66084484229015F90033EDD7 /* UsersListCollectionViewController.storyboard in Resources */,
+				6608448B229023A50033EDD7 /* UserCollectionViewCell.xib in Resources */,
 				661A0312228B624D00DE9273 /* dailymotion_users.json in Resources */,
 				661A030A228B568400DE9273 /* github_users.json in Resources */,
 			);
@@ -554,12 +568,14 @@
 				66084478229008D70033EDD7 /* Coordinator.swift in Sources */,
 				661A0305228B53E300DE9273 /* DailyMotionUser.swift in Sources */,
 				66084456228E045F0033EDD7 /* DailyMotionUsersApiHandler.swift in Sources */,
+				6608448D22903E0D0033EDD7 /* ListFlowLayoutDelegate.swift in Sources */,
 				661A0301228B52E100DE9273 /* User.swift in Sources */,
 				66084460228E0A1A0033EDD7 /* DailyMotionUsersService.swift in Sources */,
 				661A02D2228B517F00DE9273 /* AppDelegate.swift in Sources */,
 				661A0303228B539400DE9273 /* GithubUser.swift in Sources */,
 				6608445A228E04950033EDD7 /* DailyMotionUsersResponse.swift in Sources */,
 				6608442F228C88930033EDD7 /* ApiHandler.swift in Sources */,
+				66084488229023A50033EDD7 /* UserCollectionViewCell.swift in Sources */,
 				6608442D228C86EA0033EDD7 /* GithubUsersApiHandler.swift in Sources */,
 				66084475228FF8ED0033EDD7 /* UsersListCollectionViewController.swift in Sources */,
 				66084431228C91610033EDD7 /* GithubUsersService.swift in Sources */,
@@ -582,11 +598,13 @@
 				66084467228FF1EA0033EDD7 /* DailyMotionResponseTests.swift in Sources */,
 				66084479229008D70033EDD7 /* Coordinator.swift in Sources */,
 				66084457228E045F0033EDD7 /* DailyMotionUsersApiHandler.swift in Sources */,
+				66084489229023A50033EDD7 /* UserCollectionViewCell.swift in Sources */,
 				661A0307228B562300DE9273 /* GithubUserTest.swift in Sources */,
 				66084470228FF89D0033EDD7 /* UsersListPresenter.swift in Sources */,
 				6608443C228C9A090033EDD7 /* TestHelper.swift in Sources */,
 				66084439228C97E20033EDD7 /* ApiHandler.swift in Sources */,
 				66084436228C97D30033EDD7 /* GithubUsersApiHandlerTests.swift in Sources */,
+				6608448E22903E0D0033EDD7 /* ListFlowLayoutDelegate.swift in Sources */,
 				661A030D228B58E700DE9273 /* GithubUser.swift in Sources */,
 				661A0313228B642D00DE9273 /* DailyMotionUser.swift in Sources */,
 				6608447C229008E50033EDD7 /* ApplicationCoordinator.swift in Sources */,

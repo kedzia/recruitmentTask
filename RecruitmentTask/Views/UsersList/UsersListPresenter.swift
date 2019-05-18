@@ -24,6 +24,15 @@ class UsersListPresenter {
     }
     
     func loadUsers() {
-        
+        githubService.getGithubUsers { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let users):
+                    self?.view?.updateViewModel(UsersListViewModel.init(state: .loaded(users)))
+                case .failure(_):
+                    break;
+                }
+            }
+        }
     }
 }

@@ -12,7 +12,11 @@ protocol UsersListView: AnyObject {
     func updateViewModel(_ viewModel:UsersListViewModel) -> Void
 }
 
-enum UsersListViewModel {
+struct UsersListViewModel {
+    let state: UsersListViewState
+}
+
+enum UsersListViewState {
     case loading
     case loaded([User])
     case error(Error)
