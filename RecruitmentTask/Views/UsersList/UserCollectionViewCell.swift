@@ -9,9 +9,9 @@
 import UIKit
 
 class UserCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var title: UILabel?
-    @IBOutlet weak var subtitle: UILabel?
-    @IBOutlet weak var thumbnail: UIImageView?
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var subtitle: UILabel!
+    @IBOutlet weak var thumbnail: UIImageView!
     var thumbnailTask: URLSessionTask?
     
     override func awakeFromNib() {
@@ -21,7 +21,7 @@ class UserCollectionViewCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         thumbnailTask?.cancel()
-        thumbnail?.image = nil
+        thumbnail.image = nil
     }
 
 }

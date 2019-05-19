@@ -9,7 +9,11 @@
 import Foundation
 import UIKit
 
-class ApplicationCoordinator: Coordinator {
+protocol ListPresenterDelegate: AnyObject {
+    func didSelectUser(_ user: User) -> Void
+}
+
+class ApplicationCoordinator: Coordinator, ListPresenterDelegate {
     let rootViewController: UINavigationController
     let apiClient: ApiClient
     let thumbnailDownloader: ThumbnailDownloader
@@ -29,9 +33,22 @@ class ApplicationCoordinator: Coordinator {
         let presenter = UsersListPresenter.init(githubService: githubService,
                                                 dailyMotionService: dailyMotionService,
                                                 thumbnailDownloader: thumbnailDownloader)
-        let usersListVC = UIStoryboard.init(name: "UsersListCollectionViewController", bundle: nil).instantiateViewController(withIdentifier: "UsersListCollectionViewController") as! UsersListCollectionViewController
+        presenter.delegate = self
+        let usersListVC = UIStoryboard.init(name: "UsersListCollectionViewController", bundle: nil)
+            .instantiateViewController(withIdentifier: "UsersListCollectionViewController") as! UsersListCollectionViewController
         usersListVC.presenter = presenter
         
         rootViewController.pushViewController(usersListVC, animated: false)
+    }
+    
+    func didSelectUser(_ user: User) {
+        let presenter = UserDetailsPresenter.init(user: user,
+                                                  thumbnailDownloader: thumbnailDownloader)
+        let userDetailsVC = UIStoryboard.init(name: "UserDetailsStoryboard", bundle: nil)
+            .instantiateViewController(withIdentifier: "UserDetailsViewController") as! UserDetailsViewController
+        userDetailsVC.presenter = presenter
+        
+        rootViewController.pushViewController(userDetailsVC, animated: true)
+        
     }
 }

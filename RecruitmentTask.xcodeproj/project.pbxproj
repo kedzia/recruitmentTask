@@ -80,6 +80,14 @@
 		661A0310228B620C00DE9273 /* DailyMotionUserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661A030F228B620C00DE9273 /* DailyMotionUserTest.swift */; };
 		661A0312228B624D00DE9273 /* dailymotion_users.json in Resources */ = {isa = PBXBuildFile; fileRef = 661A0311228B624D00DE9273 /* dailymotion_users.json */; };
 		661A0313228B642D00DE9273 /* DailyMotionUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661A0304228B53E300DE9273 /* DailyMotionUser.swift */; };
+		66B41BA12291D678002E1610 /* UserDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B41BA02291D678002E1610 /* UserDetailsPresenter.swift */; };
+		66B41BA22291D678002E1610 /* UserDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B41BA02291D678002E1610 /* UserDetailsPresenter.swift */; };
+		66B41BA42291D696002E1610 /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B41BA32291D696002E1610 /* UserDetailsViewController.swift */; };
+		66B41BA52291D696002E1610 /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B41BA32291D696002E1610 /* UserDetailsViewController.swift */; };
+		66B41BA72291D72B002E1610 /* UserDetailsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66B41BA62291D72B002E1610 /* UserDetailsStoryboard.storyboard */; };
+		66B41BA82291D72B002E1610 /* UserDetailsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66B41BA62291D72B002E1610 /* UserDetailsStoryboard.storyboard */; };
+		66B41BAA2291DB64002E1610 /* UserDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B41BA92291DB64002E1610 /* UserDetailsView.swift */; };
+		66B41BAB2291DB64002E1610 /* UserDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B41BA92291DB64002E1610 /* UserDetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,6 +162,10 @@
 		661A0309228B568400DE9273 /* github_users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = github_users.json; sourceTree = "<group>"; };
 		661A030F228B620C00DE9273 /* DailyMotionUserTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMotionUserTest.swift; sourceTree = "<group>"; };
 		661A0311228B624D00DE9273 /* dailymotion_users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dailymotion_users.json; sourceTree = "<group>"; };
+		66B41BA02291D678002E1610 /* UserDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsPresenter.swift; sourceTree = "<group>"; };
+		66B41BA32291D696002E1610 /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
+		66B41BA62291D72B002E1610 /* UserDetailsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserDetailsStoryboard.storyboard; sourceTree = "<group>"; };
+		66B41BA92291DB64002E1610 /* UserDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +277,7 @@
 		6608446C228FF86C0033EDD7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				66B41B9F2291D651002E1610 /* UserDetails */,
 				6608446D228FF87A0033EDD7 /* UsersList */,
 			);
 			path = Views;
@@ -391,6 +404,17 @@
 				6608442E228C88930033EDD7 /* ApiHandler.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		66B41B9F2291D651002E1610 /* UserDetails */ = {
+			isa = PBXGroup;
+			children = (
+				66B41BA02291D678002E1610 /* UserDetailsPresenter.swift */,
+				66B41BA32291D696002E1610 /* UserDetailsViewController.swift */,
+				66B41BA62291D72B002E1610 /* UserDetailsStoryboard.storyboard */,
+				66B41BA92291DB64002E1610 /* UserDetailsView.swift */,
+			);
+			path = UserDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -532,6 +556,7 @@
 				66084469228FF1FF0033EDD7 /* dailymotion_response.json in Resources */,
 				6608447E229013290033EDD7 /* Default-568h@2x.png in Resources */,
 				66084483229015F90033EDD7 /* UsersListCollectionViewController.storyboard in Resources */,
+				66B41BA72291D72B002E1610 /* UserDetailsStoryboard.storyboard in Resources */,
 				6608448A229023A50033EDD7 /* UserCollectionViewCell.xib in Resources */,
 				661A02DC228B518300DE9273 /* LaunchScreen.storyboard in Resources */,
 				661A02D9228B518200DE9273 /* Assets.xcassets in Resources */,
@@ -545,6 +570,7 @@
 				6608446A228FF1FF0033EDD7 /* dailymotion_response.json in Resources */,
 				6608443E228C9BDE0033EDD7 /* github_users_malformed.json in Resources */,
 				66084484229015F90033EDD7 /* UsersListCollectionViewController.storyboard in Resources */,
+				66B41BA82291D72B002E1610 /* UserDetailsStoryboard.storyboard in Resources */,
 				6608448B229023A50033EDD7 /* UserCollectionViewCell.xib in Resources */,
 				661A0312228B624D00DE9273 /* dailymotion_users.json in Resources */,
 				661A030A228B568400DE9273 /* github_users.json in Resources */,
@@ -596,8 +622,11 @@
 				6608445A228E04950033EDD7 /* DailyMotionUsersResponse.swift in Sources */,
 				660844902290491B0033EDD7 /* ThumbnailDownloader.swift in Sources */,
 				6608442F228C88930033EDD7 /* ApiHandler.swift in Sources */,
+				66B41BA42291D696002E1610 /* UserDetailsViewController.swift in Sources */,
 				66084488229023A50033EDD7 /* UserCollectionViewCell.swift in Sources */,
 				6608442D228C86EA0033EDD7 /* GithubUsersApiHandler.swift in Sources */,
+				66B41BA12291D678002E1610 /* UserDetailsPresenter.swift in Sources */,
+				66B41BAA2291DB64002E1610 /* UserDetailsView.swift in Sources */,
 				66084475228FF8ED0033EDD7 /* UsersListCollectionViewController.swift in Sources */,
 				6608449422916DB90033EDD7 /* FetchGithubUsersOperation.swift in Sources */,
 				66084431228C91610033EDD7 /* GithubUsersService.swift in Sources */,
@@ -625,11 +654,13 @@
 				66084498229179940033EDD7 /* FetchDailyMotionUsersOperation.swift in Sources */,
 				66084457228E045F0033EDD7 /* DailyMotionUsersApiHandler.swift in Sources */,
 				66084489229023A50033EDD7 /* UserCollectionViewCell.swift in Sources */,
+				66B41BAB2291DB64002E1610 /* UserDetailsView.swift in Sources */,
 				6608449E22917B190033EDD7 /* FetchUsersOperation.swift in Sources */,
 				661A0307228B562300DE9273 /* GithubUserTest.swift in Sources */,
 				66084470228FF89D0033EDD7 /* UsersListPresenter.swift in Sources */,
 				6608443C228C9A090033EDD7 /* TestHelper.swift in Sources */,
 				66084439228C97E20033EDD7 /* ApiHandler.swift in Sources */,
+				66B41BA52291D696002E1610 /* UserDetailsViewController.swift in Sources */,
 				66084436228C97D30033EDD7 /* GithubUsersApiHandlerTests.swift in Sources */,
 				661A030D228B58E700DE9273 /* GithubUser.swift in Sources */,
 				661A0313228B642D00DE9273 /* DailyMotionUser.swift in Sources */,
@@ -637,6 +668,7 @@
 				661A030E228B58F900DE9273 /* User.swift in Sources */,
 				6608445B228E04950033EDD7 /* DailyMotionUsersResponse.swift in Sources */,
 				66084461228E0A1A0033EDD7 /* DailyMotionUsersService.swift in Sources */,
+				66B41BA22291D678002E1610 /* UserDetailsPresenter.swift in Sources */,
 				6608443A228C97E50033EDD7 /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

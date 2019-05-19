@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,12 +22,34 @@
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
+                        <view key="backgroundView" hidden="YES" contentMode="scaleToFill" id="Ouk-Sp-RWL">
+                            <rect key="frame" x="0.0" y="-44" width="414" height="896"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="#Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCJ-wi-gOf">
+                                    <rect key="frame" x="178" y="435" width="59" height="27"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="jCJ-wi-gOf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ouk-Sp-RWL" secondAttribute="leading" constant="10" id="Czy-Ha-jxT"/>
+                                <constraint firstItem="jCJ-wi-gOf" firstAttribute="centerY" secondItem="Ouk-Sp-RWL" secondAttribute="centerY" id="aSM-FP-Ssy"/>
+                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jCJ-wi-gOf" secondAttribute="trailing" constant="10" id="b8c-jL-ik8"/>
+                                <constraint firstItem="jCJ-wi-gOf" firstAttribute="centerX" secondItem="Ouk-Sp-RWL" secondAttribute="centerX" id="yoy-dT-6Hf"/>
+                            </constraints>
+                        </view>
                         <cells/>
                         <connections>
                             <outlet property="dataSource" destination="CQF-vQ-6kA" id="tzW-4g-LSN"/>
                             <outlet property="delegate" destination="CQF-vQ-6kA" id="re4-L4-j7j"/>
                         </connections>
                     </collectionView>
+                    <connections>
+                        <outlet property="errorLabel" destination="jCJ-wi-gOf" id="RMB-wi-iKc"/>
+                        <outlet property="errorView" destination="Ouk-Sp-RWL" id="wST-k0-tqF"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Aw-be-lzd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

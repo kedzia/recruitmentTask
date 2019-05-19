@@ -11,10 +11,12 @@ import UIKit
 private let reuseIdentifier = "UserCollectionViewCell"
 
 class UsersListCollectionViewController: UICollectionViewController, UsersListView {
-    
+    @IBOutlet weak var errorView: UIView!
+    @IBOutlet weak var errorLabel: UILabel!
     var presenter: UsersListPresenter!
     var state: UsersListViewState = .loading
     var users = [User]()
+    private let refreshControl = UIRefreshControl()
     
     func updateViewModel(_ viewModel: UsersListViewModel) {
         state = viewModel.state
@@ -24,11 +26,18 @@ class UsersListCollectionViewController: UICollectionViewController, UsersListVi
     private func applyState() {
         switch state {
         case .loading:
+            errorView.isHidden = true
+            refreshControl.beginRefreshing()
             break
         case .loaded(let users):
+            errorView.isHidden = true
             self.users = users
             self.collectionView.reloadData()
-        case .error:
+            refreshControl.endRefreshing()
+        case .error(let error):
+            refreshControl.endRefreshing()
+            errorView.isHidden = false
+            errorLabel.text = error.localizedDescription
             break
         }
     }
@@ -37,7 +46,7 @@ class UsersListCollectionViewController: UICollectionViewController, UsersListVi
         super.viewDidLoad()
         setupCollectionView()
         presenter.attachView(self)
-        presenter.loadUsers()
+        presenter.viewLoaded()
     }
     
     private func setupCollectionView() {
@@ -48,7 +57,14 @@ class UsersListCollectionViewController: UICollectionViewController, UsersListVi
         let flowLayout = UICollectionViewFlowLayout.init()
         self.collectionView.collectionViewLayout = flowLayout
         self.collectionView.delegate = self
+        self.collectionView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
     }
+    
+    @objc private func refreshData(_ sender: Any) {
+        presenter.didPullToRefresh()
+    }
+
 
     // MARK: UICollectionViewDataSource
 
@@ -64,17 +80,8 @@ class UsersListCollectionViewController: UICollectionViewController, UsersListVi
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! UserCollectionViewCell
     
         let user = users[indexPath.item]
-        let subtitle: String
-        switch user {
-        case is GithubUser:
-            subtitle = "Github"
-        case is DailyMotionUser:
-            subtitle = "DailyMotion"
-        default:
-            subtitle = "Unknown"
-        }
         cell.title?.text = user.username
-        cell.subtitle?.text = subtitle
+        cell.subtitle?.text = user.service
         cell.thumbnailTask = presenter.loadAvatar(for: user, imageView: cell.thumbnail!)
         
         return cell
@@ -89,21 +96,10 @@ class UsersListCollectionViewController: UICollectionViewController, UsersListVi
     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         return true
     }
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter.didSelectUser(users[indexPath.item])
     }
-    */
 
 }
 

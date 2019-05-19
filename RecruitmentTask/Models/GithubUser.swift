@@ -11,6 +11,7 @@ import Foundation
 struct GithubUser: User, Codable {
     let username: String
     let avatarUrl: URL?
+    let service = "Github"
 
     enum CodingKeys: String, CodingKey {
         case username = "login"

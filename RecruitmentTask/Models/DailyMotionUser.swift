@@ -11,6 +11,7 @@ import Foundation
 struct DailyMotionUser: User, Codable {
     let username: String
     let avatarUrl: URL?
+    let service = "DailyMotion"
     
     enum CodingKeys: String, CodingKey {
         case username = "username"

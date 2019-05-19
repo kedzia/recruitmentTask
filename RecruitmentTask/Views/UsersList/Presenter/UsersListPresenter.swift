@@ -15,6 +15,7 @@ class UsersListPresenter {
     let dailyMotionService: DailyMotionUsersService
     let thumbnailDownloader: ThumbnailDownloader
     var operationQueue: OperationQueue
+    weak var delegate: ListPresenterDelegate?
     
     init(githubService: GithubUsersService,
          dailyMotionService: DailyMotionUsersService,
@@ -30,15 +31,24 @@ class UsersListPresenter {
         self.view = view
     }
     
-    func loadUsers() {
+    func didPullToRefresh() {
+        loadUsers()
+    }
+    
+    func viewLoaded() {
+        loadUsers()
+    }
+    
+    private func loadUsers() {
         operationQueue.cancelAllOperations()
+        view?.updateViewModel(UsersListViewModel.init(state: .loading))
         fetchAllUsers() { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let users):
                     self?.view?.updateViewModel(UsersListViewModel.init(state: .loaded(users)))
-                case .failure(_):
-                    break;
+                case .failure(let error):
+                    self?.view?.updateViewModel(UsersListViewModel.init(state: .error(error)))
                 }
             }
         }
@@ -50,6 +60,10 @@ class UsersListPresenter {
         }
         
         return thumbnailDownloader.downloadThumbnail(url: avatarUrl, imageView: imageView)
+    }
+    
+    func didSelectUser(_ user: User) {
+        delegate?.didSelectUser(user)
     }
     
     private func fetchAllUsers(completion: @escaping((Result<[User], Error>) -> Void)) {
