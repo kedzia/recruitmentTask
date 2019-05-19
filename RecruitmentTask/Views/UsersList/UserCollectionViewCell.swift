@@ -9,12 +9,19 @@
 import UIKit
 
 class UserCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var username: UILabel?
-    @IBOutlet weak var api: UILabel?
-    @IBOutlet weak var avatar: UIImageView?
+    @IBOutlet weak var title: UILabel?
+    @IBOutlet weak var subtitle: UILabel?
+    @IBOutlet weak var thumbnail: UIImageView?
+    var thumbnailTask: URLSessionTask?
     
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        thumbnailTask?.cancel()
+        thumbnail?.image = nil
     }
 
 }

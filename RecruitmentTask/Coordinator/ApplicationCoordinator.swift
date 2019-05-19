@@ -12,11 +12,13 @@ import UIKit
 class ApplicationCoordinator: Coordinator {
     let rootViewController: UINavigationController
     let apiClient: ApiClient
+    let thumbnailDownloader: ThumbnailDownloader
     
     init(rootViewController: UINavigationController,
          apiClient: ApiClient = ApiClient()) {
         self.rootViewController = rootViewController
         self.apiClient = apiClient
+        self.thumbnailDownloader = ThumbnailDownloader.init(apiClient: apiClient)
     }
     
     func start() {
@@ -25,7 +27,8 @@ class ApplicationCoordinator: Coordinator {
         let dailyMotionService = DailyMotionUsersService.init(apiHandler: DailyMotionUsersApiHandler(),
                                                               apiClient: apiClient)
         let presenter = UsersListPresenter.init(githubService: githubService,
-                                                dailyMotionService: dailyMotionService)
+                                                dailyMotionService: dailyMotionService,
+                                                thumbnailDownloader: thumbnailDownloader)
         let usersListVC = UIStoryboard.init(name: "UsersListCollectionViewController", bundle: nil).instantiateViewController(withIdentifier: "UsersListCollectionViewController") as! UsersListCollectionViewController
         usersListVC.presenter = presenter
         

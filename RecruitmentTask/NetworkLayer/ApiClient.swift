@@ -15,13 +15,16 @@ class ApiClient {
         self.urlSession = urlSession
     }
     
+    @discardableResult
     func performRequest(_ request: URLRequest,
-                        completionHandler: @escaping (Data?, Error?) -> Void) {
-        urlSession.dataTask(with: request) { data, response, error in
+                        completionHandler: @escaping (Data?, Error?) -> Void) -> URLSessionTask {
+        let task = urlSession.dataTask(with: request) { data, response, error in
             
             //check reponse codes
-            
             completionHandler(data, error)
-            }.resume()
+            }
+        task.resume()
+        
+        return task
     }
 }

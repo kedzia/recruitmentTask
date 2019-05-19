@@ -35,6 +35,12 @@ class UsersListCollectionViewController: UICollectionViewController, UsersListVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupCollectionView()
+        presenter.attachView(self)
+        presenter.loadUsers()
+    }
+    
+    private func setupCollectionView() {
         self.collectionView.register(UINib.init(nibName: "UserCollectionViewCell",
                                                 bundle: nil),
                                      forCellWithReuseIdentifier: reuseIdentifier)
@@ -42,9 +48,6 @@ class UsersListCollectionViewController: UICollectionViewController, UsersListVi
         let flowLayout = UICollectionViewFlowLayout.init()
         self.collectionView.collectionViewLayout = flowLayout
         self.collectionView.delegate = self
-        
-        presenter.attachView(self)
-        presenter.loadUsers()
     }
 
     // MARK: UICollectionViewDataSource
@@ -61,8 +64,18 @@ class UsersListCollectionViewController: UICollectionViewController, UsersListVi
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! UserCollectionViewCell
     
         let user = users[indexPath.item]
-        cell.username?.text = user.username
-        cell.api?.text = user.avatarUrl?.absoluteString
+        let subtitle: String
+        switch user {
+        case is GithubUser:
+            subtitle = "Github"
+        case is DailyMotionUser:
+            subtitle = "DailyMotion"
+        default:
+            subtitle = "Unknown"
+        }
+        cell.title?.text = user.username
+        cell.subtitle?.text = subtitle
+        cell.thumbnailTask = presenter.loadAvatar(for: user, imageView: cell.thumbnail!)
         
         return cell
     }

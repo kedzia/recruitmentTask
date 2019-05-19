@@ -17,9 +17,10 @@ class DailyMotionUsersService {
         self.apiClient = apiClient
     }
     
-    func getDailyMotionUsers(completion: @escaping((Result<[DailyMotionUser], Error>) -> Void)) {
+    @discardableResult
+    func getDailyMotionUsers(completion: @escaping((Result<[DailyMotionUser], Error>) -> Void)) -> URLSessionTask {
         let request = apiHandler.createRequest()
-        apiClient.performRequest(request) { [weak self] data, error in
+        let task = apiClient.performRequest(request) { [weak self] data, error in
             guard let strongSelf = self else {
                 completion(.success([]))
                 return
@@ -37,5 +38,7 @@ class DailyMotionUsersService {
             
             completion(Result { try strongSelf.apiHandler.parseData(data) })
         }
+        
+        return task
     }
 }

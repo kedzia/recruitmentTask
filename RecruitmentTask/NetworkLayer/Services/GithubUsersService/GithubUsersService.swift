@@ -17,9 +17,10 @@ class GithubUsersService {
         self.apiClient = apiClient
     }
     
-    func getGithubUsers(completion:@escaping (Result<[GithubUser], Error>) -> Void) {
+    @discardableResult
+    func getGithubUsers(completion:@escaping (Result<[GithubUser], Error>) -> Void) -> URLSessionTask {
         let request = apiHandler.createRequest()
-        apiClient.performRequest(request) { [weak self] data, error in
+        let task = apiClient.performRequest(request) { [weak self] data, error in
             
             guard let strongSelf = self else {
                 completion(.success([]))
@@ -38,5 +39,7 @@ class GithubUsersService {
             
             completion(Result { try strongSelf.apiHandler.parseData(data) })
         }
+        
+        return task
     }
 }

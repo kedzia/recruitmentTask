@@ -14,6 +14,10 @@ class TestHelper {
         return TestHelper.getDataFromPath("github_users", type: "json")
     }
     
+    static func getDataWithDailyMotionUsers() -> Data {
+        return TestHelper.getDataFromPath("dailymotion_users", type: "json")
+    }
+    
     static func getMalformedDataWithGithubUsers() -> Data {
         return TestHelper.getDataFromPath("github_users_malformed", type: "json")
     }

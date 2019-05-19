@@ -11,18 +11,8 @@ import XCTest
 class DailyMotionUserTest: XCTestCase {
 
     func testCodable() {
-        guard let pathString = Bundle(for: type(of: self)).path(forResource: "dailymotion_users", ofType: "json") else {
-            fatalError("dailymotion_users.json not found")
-        }
-        
-        guard let jsonString = try? NSString(contentsOfFile: pathString, encoding: String.Encoding.utf8.rawValue) else {
-            fatalError("Unable to convert dailymotion_users.json to String")
-        }
-        
-        guard let jsonData = jsonString.data(using: String.Encoding.utf8.rawValue) else {
-            fatalError("Unable to convert dailymotion_users.json to NSData")
-        }
-        
+        let jsonData = TestHelper.getDataWithDailyMotionUsers()
+
         let dailyMotionUsers = try! JSONDecoder().decode([DailyMotionUser].self, from: jsonData)
         
         XCTAssertEqual(dailyMotionUsers.count, 3)

@@ -12,3 +12,16 @@ protocol User {
     var username: String { get }
     var avatarUrl: URL? { get }
 }
+
+
+extension Result {
+    typealias T = User
+    func convertResult(_ result: Result<T, Error>) -> Result<User, Error> {
+        switch result {
+        case .success(let users):
+            return .success(users)
+        case .failure(let error):
+            return .failure(error)
+        }
+    }
+}

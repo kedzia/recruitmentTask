@@ -19,11 +19,11 @@ class DailyMotionUsersApiHandlerTests: XCTestCase {
     
     func testParsingResponse() {
         do {
-            let data = TestHelper.getDataWithGithubUsers()
+            let data = TestHelper.getDailyMotionUsersResponse()
             let result = try apiHandler.parseData(data)
-            XCTAssertEqual(result.count, 3)
+            XCTAssertEqual(result.count, 10)
         } catch {
-            XCTFail()
+            XCTFail(error.localizedDescription)
         }
     }
     
